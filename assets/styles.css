@@ -1,0 +1,31 @@
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 5px;
+}
+img{
+    border-radius: 100%;
+}
+button{
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+}
+.button{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.container{
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: lightcyan;
+    padding: 5px;
+}
+thead{
+    background-color: darkcyan;
+}
