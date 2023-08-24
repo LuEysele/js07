@@ -41,7 +41,9 @@ if (storedUsers) {
                                      // mientras el tiempo de vida sea
                                      // mayor que el valor del tiempo actual,
                                      // los datos permanzcan guardados
-    const userData = users.data;
+    readData.addEventListener("click", () => { // se establece addEventListener para limpiar tabla al realizar refresh
+      const userData = users.data;
+      tableData.innerHTML = "";    
     userData.forEach((user) => {
       const row = document.createElement("tr");
       row.innerHTML = `
@@ -52,6 +54,7 @@ if (storedUsers) {
                         <td><img src="${user.avatar}" alt="Avatar"></td>
                     `;
       tableData.appendChild(row);
+    })
     });
   } else {
     localStorage.removeItem("userData"); // condición para borrar el localStorage una vez el tiempo de vida haya expirado
